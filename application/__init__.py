@@ -2,10 +2,12 @@ from flask import Blueprint, Flask, render_template
 
 from .endpoints.views import views_bp
 from .endpoints.auth import auth_bp
+from .endpoints.listener import listener_bp
 
 endpoints: dict[str, Blueprint] = {
     "views": views_bp,
-    "auth": auth_bp
+    "auth": auth_bp,
+    "listener": listener_bp
 }
 
 app = Flask(__name__)
